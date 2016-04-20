@@ -3,13 +3,7 @@
 
 <head>
     <title>Mình cần 1 câu trả lời :)</title>
-    <script>
-	window.onbeforeunload = confirmExit;
-	function confirmExit()
-	{
-		return "Mình hi vọng bạn trả lời mình chứ đừng ấn thoát như thế chứ :(";
-	}
-</script>
+
     <body>
         <STYLE>
                 body {
@@ -62,7 +56,6 @@
         <script language="JavaScript">
             <!-- Begin
             var flag = 1;
-
             function t() {
                 if (flag == 1) {
                     N.style.top = "150px";
@@ -77,11 +70,17 @@
                     flag = 1;
                 }
             }
-
-            function al() {
+	    window.onbeforeunload = al(1);
+            function al(chk) {
+	    	if (chk == 3) {
                 alert("Cảm ơn bạn đã chọn có!!! ");
                 window.location.href = 'secret.html?preUrl=' + window.location.href;
-            }
+	    	} else {
+		alert("Mình hi vọng bạn trả lời mình chứ đừng tắt đi nhé:(");
+		}
+	    }
+	    
+
             window.scrollBy(0, 1)
             window.resizeTo(0, 0)
             window.moveTo(0, 0)
@@ -193,7 +192,7 @@
     <center>
         <form><br><br><b><font color="#ffcccc" face="verdana, arial" size="5">Bạn có yêu mình không ?</font></b> <br><br><b><font color="#ffcccc" face="verdana, arial" size="2">Bạn phải trả lời thật cho mình biết nhé...<br>Mình hỏi thật lòng đấy nên bạn đừng lảng tránh!!!</font></b> <br>
             <div id="Y" style="margin: 0 auto; width: 656px;text-align:center;position: relative;">
-                <input onClick="al()" value=" Có chứ " type="button"></div>
+                <input onClick="al(3)" value=" Có chứ " type="button"></div>
             <br/>
             <div id="N" style="margin: 0 auto; width: 656px;text-align:center;position: relative;">
                 <input onMouseOver="t()" value="  Không đâu  " type="button"></div>
