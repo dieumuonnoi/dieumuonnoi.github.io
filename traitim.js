@@ -14,7 +14,7 @@ if (!image_urls) {
 if (!flash_urls) {
     var flash_urls = Array()
 }
-image_urls['corazon'] = "images/heart.png";
+image_urls['corazon'] = "images/heart.gif";
 $pdj(document).ready(function() {
     var c = $pdj(window).width();
     var d = $pdj(window).height();
